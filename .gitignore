@@ -13,6 +13,11 @@ htmlcov/
 *.sqlite
 *.log
 
+# Local planning notes from audits
+task_plan.md
+findings.md
+progress.md
+
 # Virtual environments
 .venv/
 venv/
@@ -26,4 +31,3 @@ env/
 .idea/
 .DS_Store
 Thumbs.db
-
