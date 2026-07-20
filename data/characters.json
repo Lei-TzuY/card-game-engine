@@ -1,0 +1,99 @@
+{
+    "ironclad": {
+        "name": "Ironclad",
+        "description": "A warrior who grows stronger through combat and rage.",
+        "max_hp": 80,
+        "max_energy": 3,
+        "color": "\u001b[91m",
+        "starter_relics": ["burning_blood"],
+        "starter_deck": [
+            "strike", "strike", "strike", "strike", "strike",
+            "defend", "defend", "defend", "defend", "bash"
+        ],
+        "card_pool": [
+            "strike", "defend", "cleave", "bash", "pommel_strike",
+            "intimidate", "inflame", "uppercut",
+            "iron_wave", "clothesline", "shrug_it_off", "twin_strike",
+            "battle_trance", "flex", "apparition",
+            "metallicize", "spiked_body", "flame_barrier",
+            "barricade", "entrench", "power_through", "shockwave",
+            "whirlwind", "skewer"
+        ]
+    },
+    "silent": {
+        "name": "Silent",
+        "description": "An agile rogue who strikes with speed and applies poison.",
+        "max_hp": 70,
+        "max_energy": 3,
+        "color": "\u001b[92m",
+        "starter_relics": [],
+        "starter_deck": [
+            "strike", "strike", "strike", "strike", "strike",
+            "defend", "defend", "defend", "defend", "defend",
+            "neutralize"
+        ],
+        "card_pool": [
+            "strike", "defend", "neutralize", "deadly_poison",
+            "poisoned_stab", "pommel_strike", "intimidate",
+            "dagger_throw", "footwork", "crippling_cloud",
+            "dodge_and_roll", "bouncing_flask", "apparition",
+            "self_repair", "terror", "skewer"
+        ]
+    },
+    "defect": {
+        "name": "Defect",
+        "description": "A rogue automaton that channels orb energy into powerful attacks.",
+        "max_hp": 75,
+        "max_energy": 3,
+        "color": "\u001b[94m",
+        "starter_relics": [],
+        "starter_deck": [
+            "strike", "strike", "strike", "strike",
+            "defend", "defend", "defend", "defend",
+            "zap", "dualcast"
+        ],
+        "card_pool": [
+            "strike", "defend", "zap", "dualcast",
+            "coolheaded", "ball_lightning", "cleave",
+            "cold_snap", "sweeping_beam", "glacier",
+            "compile_driver", "apparition", "self_repair", "shockwave"
+        ]
+    },
+    "watcher": {
+        "name": "Watcher",
+        "description": "A blind ascetic who has come to Evaluate the Spire.",
+        "max_hp": 72,
+        "max_energy": 3,
+        "color": "\u001b[95m",
+        "starter_relics": ["pure_water"],
+        "starter_deck": [
+            "strike", "strike", "strike", "strike",
+            "defend", "defend", "defend", "defend",
+            "eruption", "vigilance"
+        ],
+        "card_pool": [
+            "strike", "defend", "eruption", "vigilance",
+            "consecrate", "empty_fist", "crescendo", "wreath_of_flame",
+            "sash_whip", "protect", "fear_no_evil", "tranquility", "apparition",
+            "spiked_body", "self_repair", "barricade"
+        ]
+    },
+    "sentinel": {
+        "name": "Sentinel",
+        "description": "A stalwart guardian who turns an unbreakable defense into a weapon.",
+        "max_hp": 84,
+        "max_energy": 3,
+        "color": "\u001b[96m",
+        "starter_relics": ["bronze_scales"],
+        "starter_deck": [
+            "strike", "strike", "strike", "strike",
+            "defend", "defend", "defend", "defend",
+            "body_slam", "iron_wave"
+        ],
+        "card_pool": [
+            "strike", "defend", "body_slam", "iron_wave", "shrug_it_off",
+            "power_through", "entrench", "barricade", "metallicize",
+            "spiked_body", "flame_barrier", "cleave", "bash", "whirlwind"
+        ]
+    }
+}

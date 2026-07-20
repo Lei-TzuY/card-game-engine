@@ -1,0 +1,74 @@
+{
+  "fire_potion": {
+    "id": "fire_potion",
+    "name": "Fire Potion",
+    "description": "Deal 20 damage to the first selected enemy.",
+    "icon": "F"
+  },
+  "block_potion": {
+    "id": "block_potion",
+    "name": "Block Potion",
+    "description": "Gain 12 Block.",
+    "icon": "B"
+  },
+  "strength_potion": {
+    "id": "strength_potion",
+    "name": "Strength Potion",
+    "description": "Gain 2 Strength for this combat.",
+    "icon": "S"
+  },
+  "dexterity_potion": {
+    "id": "dexterity_potion",
+    "name": "Dexterity Potion",
+    "description": "Gain 2 Dexterity for this combat.",
+    "icon": "D"
+  },
+  "energy_potion": {
+    "id": "energy_potion",
+    "name": "Energy Potion",
+    "description": "Gain 2 Energy.",
+    "icon": "E"
+  },
+  "swift_potion": {
+    "id": "swift_potion",
+    "name": "Swift Potion",
+    "description": "Draw 3 cards.",
+    "icon": "SW"
+  },
+  "weak_potion": {
+    "id": "weak_potion",
+    "name": "Weak Potion",
+    "description": "Apply 3 Weak to the selected enemy.",
+    "icon": "WK"
+  },
+  "fear_potion": {
+    "id": "fear_potion",
+    "name": "Fear Potion",
+    "description": "Apply 3 Vulnerable to the selected enemy.",
+    "icon": "FR"
+  },
+  "blood_potion": {
+    "id": "blood_potion",
+    "name": "Blood Potion",
+    "description": "Heal 25% of your maximum HP.",
+    "icon": "BL"
+  },
+  "regen_potion": {
+    "id": "regen_potion",
+    "name": "Regeneration Potion",
+    "description": "Gain 5 Regen (heal a decreasing amount each turn).",
+    "icon": "RG"
+  },
+  "explosive_potion": {
+    "id": "explosive_potion",
+    "name": "Explosive Potion",
+    "description": "Deal 10 damage to ALL enemies.",
+    "icon": "EX"
+  },
+  "ancient_potion": {
+    "id": "ancient_potion",
+    "name": "Ancient Potion",
+    "description": "Gain 1 Artifact (negates your next debuff).",
+    "icon": "AR"
+  }
+}

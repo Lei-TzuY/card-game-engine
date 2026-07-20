@@ -1,0 +1,345 @@
+{
+  "healing_spring": {
+    "id": "healing_spring",
+    "name": "Healing Spring",
+    "description": "Clear water bubbles up from a quiet stone basin.",
+    "choices": [
+      {
+        "id": "drink",
+        "label": "Drink",
+        "description": "Heal 20% of your maximum HP.",
+        "action": {
+          "type": "heal_percent",
+          "amount": 20
+        }
+      },
+      {
+        "id": "leave",
+        "label": "Leave",
+        "description": "Continue without drinking.",
+        "action": {
+          "type": "leave"
+        }
+      }
+    ]
+  },
+  "golden_idol": {
+    "id": "golden_idol",
+    "name": "Golden Idol",
+    "description": "A valuable idol rests behind a line of sharpened stones.",
+    "choices": [
+      {
+        "id": "take",
+        "label": "Take the Idol",
+        "description": "Lose 7 HP. Gain 100 gold.",
+        "action": {
+          "type": "gold_for_hp",
+          "hp": 7,
+          "gold": 100
+        }
+      },
+      {
+        "id": "leave",
+        "label": "Leave",
+        "description": "Avoid the trap.",
+        "action": {
+          "type": "leave"
+        }
+      }
+    ]
+  },
+  "potion_lab": {
+    "id": "potion_lab",
+    "name": "Abandoned Laboratory",
+    "description": "One intact potion remains among the broken glass.",
+    "choices": [
+      {
+        "id": "search",
+        "label": "Search the Shelves",
+        "description": "Gain a random potion. Gain 30 gold instead if your slots are full.",
+        "action": {
+          "type": "gain_potion",
+          "fallback_gold": 30
+        }
+      },
+      {
+        "id": "leave",
+        "label": "Leave",
+        "description": "Do not disturb the laboratory.",
+        "action": {
+          "type": "leave"
+        }
+      }
+    ]
+  },
+  "the_cleric": {
+    "id": "the_cleric",
+    "name": "The Cleric",
+    "description": "A man in strange garb offers you his services.",
+    "choices": [
+      {
+        "id": "heal",
+        "label": "Heal",
+        "description": "Heal 25% of your Max HP. Lose 35 Gold.",
+        "action": {
+          "type": "heal_percent_cost_gold",
+          "amount": 25,
+          "gold": 35
+        }
+      },
+      {
+        "id": "purify",
+        "label": "Purify",
+        "description": "Remove a random Strike or Defend from your deck. Lose 50 Gold.",
+        "action": {
+          "type": "remove_random_basic_cost_gold",
+          "gold": 50
+        }
+      },
+      {
+        "id": "leave",
+        "label": "Leave",
+        "description": "Leave the Cleric.",
+        "action": {
+          "type": "leave"
+        }
+      }
+    ]
+  },
+  "scrap_ooze": {
+    "id": "scrap_ooze",
+    "name": "Scrap Ooze",
+    "description": "A pile of metallic sludge holds a shiny object. Reaching in will hurt.",
+    "choices": [
+      {
+        "id": "reach",
+        "label": "Reach Inside",
+        "description": "Take 10 damage to gain a random Relic.",
+        "action": {
+          "type": "damage_for_relic",
+          "damage": 10
+        }
+      },
+      {
+        "id": "leave",
+        "label": "Leave",
+        "description": "Leave it alone.",
+        "action": {
+          "type": "leave"
+        }
+      }
+    ]
+  },
+  "vampires": {
+    "id": "vampires",
+    "name": "Vampires(?)",
+    "description": "A group of hooded figures offer you a cup of dark blood.",
+    "choices": [
+      {
+        "id": "accept",
+        "label": "Accept",
+        "description": "Lose 30% Max HP. Replace all Strikes with Bites.",
+        "action": {
+          "type": "become_vampire"
+        }
+      },
+      {
+        "id": "leave",
+        "label": "Refuse",
+        "description": "Politely decline.",
+        "action": {
+          "type": "leave"
+        }
+      }
+    ]
+  },
+  "mysterious_sphere": {
+    "id": "mysterious_sphere",
+    "name": "Mysterious Sphere",
+    "description": "A humming metal sphere splits open along a seam. Something glints inside.",
+    "choices": [
+      {
+        "id": "reach",
+        "label": "Reach Inside",
+        "description": "Take 10 damage to gain a random Relic.",
+        "action": {
+          "type": "damage_for_relic",
+          "damage": 10
+        }
+      },
+      {
+        "id": "leave",
+        "label": "Leave",
+        "description": "Back away slowly.",
+        "action": {
+          "type": "leave"
+        }
+      }
+    ]
+  },
+  "fountain_of_purity": {
+    "id": "fountain_of_purity",
+    "name": "Fountain of Purity",
+    "description": "A crystalline fountain pours endlessly into a basin of light.",
+    "choices": [
+      {
+        "id": "drink",
+        "label": "Drink Deeply",
+        "description": "Heal 30% of your maximum HP.",
+        "action": {
+          "type": "heal_percent",
+          "amount": 30
+        }
+      },
+      {
+        "id": "leave",
+        "label": "Leave",
+        "description": "Continue on your way.",
+        "action": {
+          "type": "leave"
+        }
+      }
+    ]
+  },
+  "wandering_merchant": {
+    "id": "wandering_merchant",
+    "name": "Wandering Merchant",
+    "description": "A cloaked figure sets down a heavy pack and offers a few odd services.",
+    "choices": [
+      {
+        "id": "heal",
+        "label": "Field Medicine",
+        "description": "Heal 25% of your Max HP. Lose 40 Gold.",
+        "action": {
+          "type": "heal_percent_cost_gold",
+          "amount": 25,
+          "gold": 40
+        }
+      },
+      {
+        "id": "search",
+        "label": "Rummage the Pack",
+        "description": "Gain a random potion. Gain 25 gold instead if your slots are full.",
+        "action": {
+          "type": "gain_potion",
+          "fallback_gold": 25
+        }
+      },
+      {
+        "id": "leave",
+        "label": "Leave",
+        "description": "Decline and move on.",
+        "action": {
+          "type": "leave"
+        }
+      }
+    ]
+  },
+  "bonfire_spirits": {
+    "id": "bonfire_spirits",
+    "name": "Bonfire Spirits",
+    "description": "Playful spirits dance around a roaring bonfire, beckoning for an offering.",
+    "choices": [
+      {
+        "id": "offer",
+        "label": "Offer a Basic Card",
+        "description": "Remove a random Strike or Defend from your deck.",
+        "action": {
+          "type": "remove_random_basic_cost_gold",
+          "gold": 0
+        }
+      },
+      {
+        "id": "leave",
+        "label": "Leave",
+        "description": "Warm your hands and move on.",
+        "action": {
+          "type": "leave"
+        }
+      }
+    ]
+  },
+  "forgotten_cache": {
+    "id": "forgotten_cache",
+    "name": "Forgotten Cache",
+    "description": "A cracked lockbox sits half-buried beneath old battlefield ash.",
+    "choices": [
+      {
+        "id": "force",
+        "label": "Force It Open",
+        "description": "Lose 6 HP. Gain 80 gold.",
+        "action": {
+          "type": "gold_for_hp",
+          "hp": 6,
+          "gold": 80
+        }
+      },
+      {
+        "id": "leave",
+        "label": "Leave",
+        "description": "Leave the lockbox untouched.",
+        "action": {
+          "type": "leave"
+        }
+      }
+    ]
+  },
+  "field_surgeon": {
+    "id": "field_surgeon",
+    "name": "Field Surgeon",
+    "description": "A tired medic offers quick treatment before the road turns dangerous.",
+    "choices": [
+      {
+        "id": "patch_up",
+        "label": "Patch Up",
+        "description": "Heal 20% of your Max HP. Lose 25 Gold.",
+        "action": {
+          "type": "heal_percent_cost_gold",
+          "amount": 20,
+          "gold": 25
+        }
+      },
+      {
+        "id": "cleanse",
+        "label": "Cleanse Supplies",
+        "description": "Remove a random Strike or Defend from your deck. Lose 60 Gold.",
+        "action": {
+          "type": "remove_random_basic_cost_gold",
+          "gold": 60
+        }
+      },
+      {
+        "id": "leave",
+        "label": "Leave",
+        "description": "Thank the medic and move on.",
+        "action": {
+          "type": "leave"
+        }
+      }
+    ]
+  },
+  "sealed_chest": {
+    "id": "sealed_chest",
+    "name": "Sealed Chest",
+    "description": "A heavy chest hums with pressure whenever you touch the latch.",
+    "choices": [
+      {
+        "id": "open",
+        "label": "Open It",
+        "description": "Take 12 damage to gain a random Relic.",
+        "action": {
+          "type": "damage_for_relic",
+          "damage": 12
+        }
+      },
+      {
+        "id": "leave",
+        "label": "Leave",
+        "description": "The chest can keep its secret.",
+        "action": {
+          "type": "leave"
+        }
+      }
+    ]
+  }
+}

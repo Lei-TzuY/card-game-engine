@@ -1,0 +1,714 @@
+[
+    {
+        "id": "strike",
+        "rarity": "common",
+        "name": "Strike",
+        "cost": 1,
+        "type": "Attack",
+        "effects": [{"type": "damage", "amount": 6}],
+        "upgrade": {"effects": [{"type": "damage", "amount": 9}]}
+    },
+    {
+        "id": "intimidate",
+        "rarity": "common",
+        "name": "Intimidate",
+        "cost": 0,
+        "type": "Skill",
+        "exhaust": true,
+        "effects": [{"type": "apply_buff", "buff": "weak", "amount": 1, "target": "all_enemies"}],
+        "upgrade": {"effects": [{"type": "apply_buff", "buff": "weak", "amount": 2, "target": "all_enemies"}]}
+    },
+    {
+        "id": "defend",
+        "rarity": "common",
+        "name": "Defend",
+        "cost": 1,
+        "type": "Skill",
+        "effects": [{"type": "block", "amount": 5, "target": "source"}],
+        "upgrade": {"effects": [{"type": "block", "amount": 8, "target": "source"}]}
+    },
+    {
+        "id": "cleave",
+        "rarity": "common",
+        "name": "Cleave",
+        "cost": 1,
+        "type": "Attack",
+        "effects": [{"type": "damage", "amount": 8, "target": "all_enemies"}],
+        "upgrade": {"effects": [{"type": "damage", "amount": 11, "target": "all_enemies"}]}
+    },
+    {
+        "id": "bash",
+        "rarity": "uncommon",
+        "name": "Bash",
+        "cost": 2,
+        "type": "Attack",
+        "effects": [
+            {"type": "damage", "amount": 8},
+            {"type": "apply_buff", "buff": "vulnerable", "amount": 2, "target": "target"}
+        ],
+        "upgrade": {
+            "effects": [
+                {"type": "damage", "amount": 10},
+                {"type": "apply_buff", "buff": "vulnerable", "amount": 3, "target": "target"}
+            ]
+        }
+    },
+    {
+        "id": "pommel_strike",
+        "rarity": "common",
+        "name": "Pommel Strike",
+        "cost": 1,
+        "type": "Attack",
+        "effects": [
+            {"type": "damage", "amount": 5},
+            {"type": "draw", "amount": 1, "target": "source"}
+        ],
+        "upgrade": {
+            "effects": [
+                {"type": "damage", "amount": 8},
+                {"type": "draw", "amount": 1, "target": "source"}
+            ]
+        }
+    },
+    {
+        "id": "neutralize",
+        "rarity": "common",
+        "name": "Neutralize",
+        "cost": 0,
+        "type": "Attack",
+        "effects": [
+            {"type": "damage", "amount": 3},
+            {"type": "apply_buff", "buff": "weak", "amount": 1, "target": "target"}
+        ],
+        "upgrade": {
+            "effects": [
+                {"type": "damage", "amount": 4},
+                {"type": "apply_buff", "buff": "weak", "amount": 2, "target": "target"}
+            ]
+        }
+    },
+    {
+        "id": "deadly_poison",
+        "rarity": "common",
+        "name": "Deadly Poison",
+        "cost": 1,
+        "type": "Skill",
+        "effects": [{"type": "poison", "amount": 5}],
+        "upgrade": {"effects": [{"type": "poison", "amount": 7}]}
+    },
+    {
+        "id": "poisoned_stab",
+        "rarity": "common",
+        "name": "Poisoned Stab",
+        "cost": 1,
+        "type": "Attack",
+        "effects": [
+            {"type": "damage", "amount": 6},
+            {"type": "poison", "amount": 3}
+        ],
+        "upgrade": {
+            "effects": [
+                {"type": "damage", "amount": 8},
+                {"type": "poison", "amount": 4}
+            ]
+        }
+    },
+    {
+        "id": "zap",
+        "rarity": "common",
+        "name": "Zap",
+        "cost": 1,
+        "type": "Skill",
+        "effects": [{"type": "channel_orb", "orb": "lightning"}],
+        "upgrade": {"cost": 0}
+    },
+    {
+        "id": "dualcast",
+        "rarity": "common",
+        "name": "Dualcast",
+        "cost": 1,
+        "type": "Skill",
+        "effects": [{"type": "evoke_orb", "amount": 2}],
+        "upgrade": {"cost": 0}
+    },
+    {
+        "id": "coolheaded",
+        "rarity": "common",
+        "name": "Coolheaded",
+        "cost": 1,
+        "type": "Skill",
+        "effects": [
+            {"type": "channel_orb", "orb": "frost"},
+            {"type": "draw", "amount": 1, "target": "source"}
+        ],
+        "upgrade": {
+            "effects": [
+                {"type": "channel_orb", "orb": "frost"},
+                {"type": "draw", "amount": 2, "target": "source"}
+            ]
+        }
+    },
+    {
+        "id": "ball_lightning",
+        "rarity": "common",
+        "name": "Ball Lightning",
+        "cost": 1,
+        "type": "Attack",
+        "effects": [
+            {"type": "damage", "amount": 7},
+            {"type": "channel_orb", "orb": "lightning"}
+        ],
+        "upgrade": {
+            "effects": [
+                {"type": "damage", "amount": 10},
+                {"type": "channel_orb", "orb": "lightning"}
+            ]
+        }
+    },
+    {
+        "id": "inflame",
+        "rarity": "uncommon",
+        "name": "Inflame",
+        "cost": 1,
+        "type": "Power",
+        "effects": [{"type": "apply_buff", "buff": "strength", "amount": 2, "target": "source"}],
+        "upgrade": {"effects": [{"type": "apply_buff", "buff": "strength", "amount": 3, "target": "source"}]}
+    },
+    {
+        "id": "uppercut",
+        "rarity": "rare",
+        "name": "Uppercut",
+        "cost": 2,
+        "type": "Attack",
+        "effects": [
+            {"type": "damage", "amount": 13},
+            {"type": "apply_buff", "buff": "weak", "amount": 1, "target": "target"},
+            {"type": "apply_buff", "buff": "vulnerable", "amount": 1, "target": "target"}
+        ],
+        "upgrade": {
+            "effects": [
+                {"type": "damage", "amount": 16},
+                {"type": "apply_buff", "buff": "weak", "amount": 2, "target": "target"},
+                {"type": "apply_buff", "buff": "vulnerable", "amount": 2, "target": "target"}
+            ]
+        }
+    },
+    {
+        "id": "bite",
+        "rarity": "uncommon",
+        "name": "Bite",
+        "cost": 1,
+        "type": "Attack",
+        "effects": [
+            {"type": "damage", "amount": 7},
+            {"type": "heal", "amount": 2, "target": "source"}
+        ],
+        "upgrade": {
+            "effects": [
+                {"type": "damage", "amount": 8},
+                {"type": "heal", "amount": 3, "target": "source"}
+            ]
+        }
+    },
+    {
+        "id": "eruption",
+        "rarity": "common",
+        "name": "Eruption",
+        "cost": 2,
+        "type": "Attack",
+        "effects": [
+            {"type": "damage", "amount": 9},
+            {"type": "change_stance", "stance": "Wrath", "target": "source"}
+        ],
+        "upgrade": {
+            "cost": 1
+        }
+    },
+    {
+        "id": "vigilance",
+        "rarity": "common",
+        "name": "Vigilance",
+        "cost": 2,
+        "type": "Skill",
+        "effects": [
+            {"type": "block", "amount": 8, "target": "source"},
+            {"type": "change_stance", "stance": "Calm", "target": "source"}
+        ],
+        "upgrade": {
+            "effects": [
+                {"type": "block", "amount": 12, "target": "source"},
+                {"type": "change_stance", "stance": "Calm", "target": "source"}
+            ]
+        }
+    },
+    {
+        "id": "consecrate",
+        "rarity": "common",
+        "name": "Consecrate",
+        "cost": 0,
+        "type": "Attack",
+        "effects": [{"type": "damage", "amount": 5, "target": "all_enemies"}],
+        "upgrade": {"effects": [{"type": "damage", "amount": 8, "target": "all_enemies"}]}
+    },
+    {
+        "id": "empty_fist",
+        "rarity": "common",
+        "name": "Empty Fist",
+        "cost": 1,
+        "type": "Attack",
+        "effects": [
+            {"type": "damage", "amount": 9},
+            {"type": "change_stance", "stance": "Neutral", "target": "source"}
+        ],
+        "upgrade": {
+            "effects": [
+                {"type": "damage", "amount": 14},
+                {"type": "change_stance", "stance": "Neutral", "target": "source"}
+            ]
+        }
+    },
+    {
+        "id": "crescendo",
+        "rarity": "uncommon",
+        "name": "Crescendo",
+        "cost": 1,
+        "type": "Skill",
+        "exhaust": true,
+        "effects": [
+            {"type": "change_stance", "stance": "Wrath", "target": "source"}
+        ],
+        "upgrade": {
+            "cost": 0
+        }
+    },
+    {
+        "id": "wreath_of_flame",
+        "rarity": "uncommon",
+        "name": "Wreath of Flame",
+        "cost": 1,
+        "type": "Skill",
+        "effects": [
+            {"type": "apply_buff", "buff": "strength", "amount": 2, "target": "source"}
+        ],
+        "upgrade": {
+            "effects": [
+                {"type": "apply_buff", "buff": "strength", "amount": 3, "target": "source"}
+            ]
+        }
+    },
+    {
+        "id": "iron_wave",
+        "rarity": "common",
+        "name": "Iron Wave",
+        "cost": 1,
+        "type": "Attack",
+        "effects": [
+            {"type": "damage", "amount": 5},
+            {"type": "block", "amount": 5, "target": "source"}
+        ],
+        "upgrade": {
+            "effects": [
+                {"type": "damage", "amount": 7},
+                {"type": "block", "amount": 7, "target": "source"}
+            ]
+        }
+    },
+    {
+        "id": "clothesline",
+        "rarity": "uncommon",
+        "name": "Clothesline",
+        "cost": 2,
+        "type": "Attack",
+        "effects": [
+            {"type": "damage", "amount": 12},
+            {"type": "apply_buff", "buff": "weak", "amount": 2, "target": "target"}
+        ],
+        "upgrade": {
+            "effects": [
+                {"type": "damage", "amount": 14},
+                {"type": "apply_buff", "buff": "weak", "amount": 3, "target": "target"}
+            ]
+        }
+    },
+    {
+        "id": "shrug_it_off",
+        "rarity": "common",
+        "name": "Shrug It Off",
+        "cost": 1,
+        "type": "Skill",
+        "effects": [
+            {"type": "block", "amount": 8, "target": "source"},
+            {"type": "draw", "amount": 1, "target": "source"}
+        ],
+        "upgrade": {
+            "effects": [
+                {"type": "block", "amount": 11, "target": "source"},
+                {"type": "draw", "amount": 1, "target": "source"}
+            ]
+        }
+    },
+    {
+        "id": "twin_strike",
+        "rarity": "common",
+        "name": "Twin Strike",
+        "cost": 1,
+        "type": "Attack",
+        "effects": [
+            {"type": "damage", "amount": 5},
+            {"type": "damage", "amount": 5}
+        ],
+        "upgrade": {
+            "effects": [
+                {"type": "damage", "amount": 7},
+                {"type": "damage", "amount": 7}
+            ]
+        }
+    },
+    {
+        "id": "battle_trance",
+        "rarity": "uncommon",
+        "name": "Battle Trance",
+        "cost": 0,
+        "type": "Skill",
+        "effects": [{"type": "draw", "amount": 3, "target": "source"}],
+        "upgrade": {"effects": [{"type": "draw", "amount": 4, "target": "source"}]}
+    },
+    {
+        "id": "flex",
+        "rarity": "common",
+        "name": "Flex",
+        "cost": 0,
+        "type": "Skill",
+        "effects": [{"type": "apply_buff", "buff": "strength", "amount": 2, "target": "source"}],
+        "upgrade": {"effects": [{"type": "apply_buff", "buff": "strength", "amount": 4, "target": "source"}]}
+    },
+    {
+        "id": "dagger_throw",
+        "rarity": "common",
+        "name": "Dagger Throw",
+        "cost": 1,
+        "type": "Attack",
+        "effects": [
+            {"type": "damage", "amount": 9},
+            {"type": "draw", "amount": 1, "target": "source"}
+        ],
+        "upgrade": {
+            "effects": [
+                {"type": "damage", "amount": 12},
+                {"type": "draw", "amount": 1, "target": "source"}
+            ]
+        }
+    },
+    {
+        "id": "footwork",
+        "rarity": "uncommon",
+        "name": "Footwork",
+        "cost": 1,
+        "type": "Power",
+        "effects": [{"type": "apply_buff", "buff": "dexterity", "amount": 2, "target": "source"}],
+        "upgrade": {"effects": [{"type": "apply_buff", "buff": "dexterity", "amount": 3, "target": "source"}]}
+    },
+    {
+        "id": "crippling_cloud",
+        "rarity": "uncommon",
+        "name": "Crippling Cloud",
+        "cost": 2,
+        "type": "Skill",
+        "exhaust": true,
+        "effects": [
+            {"type": "poison", "amount": 4, "target": "all_enemies"},
+            {"type": "apply_buff", "buff": "weak", "amount": 2, "target": "all_enemies"}
+        ],
+        "upgrade": {
+            "effects": [
+                {"type": "poison", "amount": 7, "target": "all_enemies"},
+                {"type": "apply_buff", "buff": "weak", "amount": 2, "target": "all_enemies"}
+            ]
+        }
+    },
+    {
+        "id": "bouncing_flask",
+        "rarity": "uncommon",
+        "name": "Bouncing Flask",
+        "cost": 2,
+        "type": "Skill",
+        "effects": [{"type": "poison", "amount": 3, "target": "all_enemies"}],
+        "upgrade": {"effects": [{"type": "poison", "amount": 4, "target": "all_enemies"}]}
+    },
+    {
+        "id": "dodge_and_roll",
+        "rarity": "common",
+        "name": "Dodge and Roll",
+        "cost": 1,
+        "type": "Skill",
+        "effects": [
+            {"type": "block", "amount": 4, "target": "source"},
+            {"type": "block", "amount": 4, "target": "source"}
+        ],
+        "upgrade": {
+            "effects": [
+                {"type": "block", "amount": 6, "target": "source"},
+                {"type": "block", "amount": 6, "target": "source"}
+            ]
+        }
+    },
+    {
+        "id": "cold_snap",
+        "rarity": "common",
+        "name": "Cold Snap",
+        "cost": 1,
+        "type": "Attack",
+        "effects": [
+            {"type": "damage", "amount": 6},
+            {"type": "channel_orb", "orb": "frost"}
+        ],
+        "upgrade": {
+            "effects": [
+                {"type": "damage", "amount": 9},
+                {"type": "channel_orb", "orb": "frost"}
+            ]
+        }
+    },
+    {
+        "id": "sweeping_beam",
+        "rarity": "common",
+        "name": "Sweeping Beam",
+        "cost": 1,
+        "type": "Attack",
+        "effects": [
+            {"type": "damage", "amount": 6, "target": "all_enemies"},
+            {"type": "draw", "amount": 1, "target": "source"}
+        ],
+        "upgrade": {
+            "effects": [
+                {"type": "damage", "amount": 9, "target": "all_enemies"},
+                {"type": "draw", "amount": 1, "target": "source"}
+            ]
+        }
+    },
+    {
+        "id": "glacier",
+        "rarity": "rare",
+        "name": "Glacier",
+        "cost": 2,
+        "type": "Skill",
+        "effects": [
+            {"type": "block", "amount": 7, "target": "source"},
+            {"type": "channel_orb", "orb": "frost"},
+            {"type": "channel_orb", "orb": "frost"}
+        ],
+        "upgrade": {
+            "effects": [
+                {"type": "block", "amount": 10, "target": "source"},
+                {"type": "channel_orb", "orb": "frost"},
+                {"type": "channel_orb", "orb": "frost"}
+            ]
+        }
+    },
+    {
+        "id": "compile_driver",
+        "rarity": "uncommon",
+        "name": "Compile Driver",
+        "cost": 1,
+        "type": "Attack",
+        "effects": [
+            {"type": "damage", "amount": 7},
+            {"type": "channel_orb", "orb": "lightning"}
+        ],
+        "upgrade": {
+            "effects": [
+                {"type": "damage", "amount": 10},
+                {"type": "channel_orb", "orb": "lightning"}
+            ]
+        }
+    },
+    {
+        "id": "sash_whip",
+        "rarity": "common",
+        "name": "Sash Whip",
+        "cost": 1,
+        "type": "Attack",
+        "effects": [
+            {"type": "damage", "amount": 8},
+            {"type": "apply_buff", "buff": "weak", "amount": 1, "target": "target"}
+        ],
+        "upgrade": {
+            "effects": [
+                {"type": "damage", "amount": 10},
+                {"type": "apply_buff", "buff": "weak", "amount": 2, "target": "target"}
+            ]
+        }
+    },
+    {
+        "id": "protect",
+        "rarity": "uncommon",
+        "name": "Protect",
+        "cost": 2,
+        "type": "Skill",
+        "effects": [{"type": "block", "amount": 12, "target": "source"}],
+        "upgrade": {"effects": [{"type": "block", "amount": 16, "target": "source"}]}
+    },
+    {
+        "id": "fear_no_evil",
+        "rarity": "common",
+        "name": "Fear No Evil",
+        "cost": 1,
+        "type": "Attack",
+        "effects": [
+            {"type": "damage", "amount": 8},
+            {"type": "change_stance", "stance": "Calm", "target": "source"}
+        ],
+        "upgrade": {
+            "effects": [
+                {"type": "damage", "amount": 11},
+                {"type": "change_stance", "stance": "Calm", "target": "source"}
+            ]
+        }
+    },
+    {
+        "id": "tranquility",
+        "rarity": "common",
+        "name": "Tranquility",
+        "cost": 1,
+        "type": "Skill",
+        "exhaust": true,
+        "effects": [{"type": "change_stance", "stance": "Calm", "target": "source"}],
+        "upgrade": {"cost": 0}
+    },
+    {
+        "id": "apparition",
+        "rarity": "rare",
+        "name": "Apparition",
+        "cost": 1,
+        "type": "Skill",
+        "exhaust": true,
+        "effects": [{"type": "apply_buff", "buff": "intangible", "amount": 1, "target": "source"}],
+        "upgrade": {"cost": 0}
+    },
+    {
+        "id": "metallicize",
+        "rarity": "uncommon",
+        "name": "Metallicize",
+        "cost": 1,
+        "type": "Power",
+        "effects": [{"type": "apply_buff", "buff": "metallicize", "amount": 3, "target": "source"}],
+        "upgrade": {"effects": [{"type": "apply_buff", "buff": "metallicize", "amount": 4, "target": "source"}]}
+    },
+    {
+        "id": "spiked_body",
+        "rarity": "uncommon",
+        "name": "Spiked Body",
+        "cost": 1,
+        "type": "Power",
+        "effects": [{"type": "apply_buff", "buff": "thorns", "amount": 3, "target": "source"}],
+        "upgrade": {"effects": [{"type": "apply_buff", "buff": "thorns", "amount": 4, "target": "source"}]}
+    },
+    {
+        "id": "flame_barrier",
+        "rarity": "uncommon",
+        "name": "Flame Barrier",
+        "cost": 2,
+        "type": "Skill",
+        "effects": [
+            {"type": "block", "amount": 12, "target": "source"},
+            {"type": "apply_buff", "buff": "thorns", "amount": 4, "target": "source"}
+        ],
+        "upgrade": {
+            "effects": [
+                {"type": "block", "amount": 16, "target": "source"},
+                {"type": "apply_buff", "buff": "thorns", "amount": 6, "target": "source"}
+            ]
+        }
+    },
+    {
+        "id": "self_repair",
+        "rarity": "uncommon",
+        "name": "Self Repair",
+        "cost": 1,
+        "type": "Power",
+        "effects": [{"type": "apply_buff", "buff": "regen", "amount": 4, "target": "source"}],
+        "upgrade": {"effects": [{"type": "apply_buff", "buff": "regen", "amount": 6, "target": "source"}]}
+    },
+    {
+        "id": "barricade",
+        "rarity": "rare",
+        "name": "Barricade",
+        "cost": 3,
+        "type": "Power",
+        "effects": [{"type": "apply_buff", "buff": "barricade", "amount": 1, "target": "source"}],
+        "upgrade": {"cost": 2}
+    },
+    {
+        "id": "entrench",
+        "rarity": "uncommon",
+        "name": "Entrench",
+        "cost": 2,
+        "type": "Skill",
+        "effects": [{"type": "double_block", "target": "source"}],
+        "upgrade": {"cost": 1}
+    },
+    {
+        "id": "power_through",
+        "rarity": "uncommon",
+        "name": "Power Through",
+        "cost": 1,
+        "type": "Skill",
+        "effects": [{"type": "block", "amount": 15, "target": "source"}],
+        "upgrade": {"effects": [{"type": "block", "amount": 20, "target": "source"}]}
+    },
+    {
+        "id": "shockwave",
+        "rarity": "uncommon",
+        "name": "Shockwave",
+        "cost": 2,
+        "type": "Skill",
+        "exhaust": true,
+        "effects": [
+            {"type": "apply_buff", "buff": "weak", "amount": 3, "target": "all_enemies"},
+            {"type": "apply_buff", "buff": "vulnerable", "amount": 3, "target": "all_enemies"}
+        ],
+        "upgrade": {
+            "effects": [
+                {"type": "apply_buff", "buff": "weak", "amount": 5, "target": "all_enemies"},
+                {"type": "apply_buff", "buff": "vulnerable", "amount": 5, "target": "all_enemies"}
+            ]
+        }
+    },
+    {
+        "id": "terror",
+        "rarity": "uncommon",
+        "name": "Terror",
+        "cost": 1,
+        "type": "Skill",
+        "exhaust": true,
+        "effects": [{"type": "apply_buff", "buff": "vulnerable", "amount": 5, "target": "target"}],
+        "upgrade": {"effects": [{"type": "apply_buff", "buff": "vulnerable", "amount": 8, "target": "target"}]}
+    },
+    {
+        "id": "body_slam",
+        "rarity": "common",
+        "name": "Body Slam",
+        "cost": 1,
+        "type": "Attack",
+        "effects": [{"type": "block_damage", "target": "target"}],
+        "upgrade": {"cost": 0}
+    },
+    {
+        "id": "whirlwind",
+        "rarity": "uncommon",
+        "name": "Whirlwind",
+        "cost": "X",
+        "type": "Attack",
+        "effects": [{"type": "damage", "amount": 5, "target": "all_enemies", "per_energy": true}],
+        "upgrade": {"effects": [{"type": "damage", "amount": 8, "target": "all_enemies", "per_energy": true}]}
+    },
+    {
+        "id": "skewer",
+        "rarity": "uncommon",
+        "name": "Skewer",
+        "cost": "X",
+        "type": "Attack",
+        "effects": [{"type": "damage", "amount": 7, "target": "target", "per_energy": true}],
+        "upgrade": {"effects": [{"type": "damage", "amount": 10, "target": "target", "per_energy": true}]}
+    }
+]

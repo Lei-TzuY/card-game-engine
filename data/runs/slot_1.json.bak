@@ -1,0 +1,817 @@
+{
+    "save_version": 6,
+    "player": {
+        "name": "Ironclad",
+        "max_hp": 80,
+        "hp": 80,
+        "block": 0,
+        "buffs": {},
+        "stance": "Neutral",
+        "energy": 3,
+        "max_energy": 3,
+        "orbs": [],
+        "max_orb_slots": 3
+    },
+    "character_id": "ironclad",
+    "master_deck": [
+        "strike",
+        "strike",
+        "strike",
+        "strike",
+        "strike",
+        "defend",
+        "defend",
+        "defend",
+        "bash",
+        "flex"
+    ],
+    "relics": [
+        {
+            "id": "burning_blood",
+            "rarity": "common",
+            "name": "Burning Blood",
+            "description": "At the end of combat, heal 6 HP.",
+            "icon": "BB",
+            "rewardable": false
+        }
+    ],
+    "phase": "MAP",
+    "current_node_id": null,
+    "current_event": null,
+    "reward_choices": [],
+    "reward_relic": null,
+    "reward_card_resolved": false,
+    "available_node_ids": [
+        7
+    ],
+    "floor": 2,
+    "gold": 70,
+    "potions": [
+        {
+            "id": "strength_potion",
+            "name": "Strength Potion",
+            "description": "Gain 2 Strength for this combat.",
+            "icon": "S"
+        }
+    ],
+    "max_potion_slots": 3,
+    "shop_cards": [],
+    "shop_potions": [],
+    "shop_remove_price": 75,
+    "shop_remove_used": false,
+    "map_nodes": [
+        {
+            "id": 1,
+            "type": "Enemy",
+            "floor": 1,
+            "enemies_data": [
+                {
+                    "name": "Goblin",
+                    "hp": 18,
+                    "attack": 5,
+                    "actions": [
+                        {
+                            "type": "attack",
+                            "amount": 5
+                        },
+                        {
+                            "type": "block",
+                            "amount": 4
+                        }
+                    ],
+                    "phases": [],
+                    "passives": []
+                }
+            ],
+            "completed": true,
+            "connections": [
+                6
+            ]
+        },
+        {
+            "id": 2,
+            "type": "Enemy",
+            "floor": 1,
+            "enemies_data": [
+                {
+                    "name": "Goblin",
+                    "hp": 18,
+                    "attack": 5,
+                    "actions": [
+                        {
+                            "type": "attack",
+                            "amount": 5
+                        },
+                        {
+                            "type": "block",
+                            "amount": 4
+                        }
+                    ],
+                    "phases": [],
+                    "passives": []
+                }
+            ],
+            "completed": false,
+            "connections": [
+                4,
+                5
+            ]
+        },
+        {
+            "id": 3,
+            "type": "Event",
+            "floor": 1,
+            "enemies_data": [],
+            "completed": false,
+            "connections": [
+                4
+            ]
+        },
+        {
+            "id": 4,
+            "type": "Event",
+            "floor": 2,
+            "enemies_data": [],
+            "completed": false,
+            "connections": [
+                7
+            ]
+        },
+        {
+            "id": 5,
+            "type": "Enemy",
+            "floor": 2,
+            "enemies_data": [
+                {
+                    "name": "Sneaky Looter",
+                    "hp": 32,
+                    "attack": 7,
+                    "actions": [
+                        {
+                            "type": "attack",
+                            "amount": 7
+                        },
+                        {
+                            "type": "block",
+                            "amount": 4
+                        },
+                        {
+                            "type": "attack",
+                            "amount": 9
+                        }
+                    ],
+                    "phases": [],
+                    "passives": []
+                }
+            ],
+            "completed": false,
+            "connections": [
+                7
+            ]
+        },
+        {
+            "id": 6,
+            "type": "Event",
+            "floor": 2,
+            "enemies_data": [],
+            "completed": true,
+            "connections": [
+                7
+            ]
+        },
+        {
+            "id": 7,
+            "type": "Shop",
+            "floor": 3,
+            "enemies_data": [],
+            "completed": false,
+            "connections": [
+                8,
+                10
+            ]
+        },
+        {
+            "id": 8,
+            "type": "Event",
+            "floor": 4,
+            "enemies_data": [],
+            "completed": false,
+            "connections": [
+                12,
+                13
+            ]
+        },
+        {
+            "id": 9,
+            "type": "Enemy",
+            "floor": 4,
+            "enemies_data": [
+                {
+                    "name": "Snake Plant",
+                    "hp": 78,
+                    "attack": 7,
+                    "actions": [
+                        {
+                            "type": "attack",
+                            "amount": 7
+                        },
+                        {
+                            "type": "attack",
+                            "amount": 7
+                        },
+                        {
+                            "type": "block",
+                            "amount": 8
+                        }
+                    ],
+                    "phases": [],
+                    "passives": []
+                }
+            ],
+            "completed": false,
+            "connections": [
+                11,
+                13
+            ]
+        },
+        {
+            "id": 10,
+            "type": "Event",
+            "floor": 4,
+            "enemies_data": [],
+            "completed": false,
+            "connections": [
+                11
+            ]
+        },
+        {
+            "id": 11,
+            "type": "Rest",
+            "floor": 5,
+            "enemies_data": [],
+            "completed": false,
+            "connections": [
+                15
+            ]
+        },
+        {
+            "id": 12,
+            "type": "Enemy",
+            "floor": 5,
+            "enemies_data": [
+                {
+                    "name": "Snake Plant",
+                    "hp": 78,
+                    "attack": 7,
+                    "actions": [
+                        {
+                            "type": "attack",
+                            "amount": 7
+                        },
+                        {
+                            "type": "attack",
+                            "amount": 7
+                        },
+                        {
+                            "type": "block",
+                            "amount": 8
+                        }
+                    ],
+                    "phases": [],
+                    "passives": []
+                }
+            ],
+            "completed": false,
+            "connections": [
+                15
+            ]
+        },
+        {
+            "id": 13,
+            "type": "Enemy",
+            "floor": 5,
+            "enemies_data": [
+                {
+                    "name": "Jaw Worm",
+                    "hp": 42,
+                    "attack": 9,
+                    "actions": [
+                        {
+                            "type": "attack",
+                            "amount": 9
+                        },
+                        {
+                            "type": "block",
+                            "amount": 6
+                        }
+                    ],
+                    "phases": [],
+                    "passives": []
+                },
+                {
+                    "name": "Mystic",
+                    "hp": 54,
+                    "attack": 8,
+                    "actions": [
+                        {
+                            "type": "strength",
+                            "amount": 2
+                        },
+                        {
+                            "type": "block",
+                            "amount": 12
+                        },
+                        {
+                            "type": "attack",
+                            "amount": 8
+                        }
+                    ],
+                    "phases": [],
+                    "passives": []
+                }
+            ],
+            "completed": false,
+            "connections": [
+                14,
+                15
+            ]
+        },
+        {
+            "id": 14,
+            "type": "Enemy",
+            "floor": 6,
+            "enemies_data": [
+                {
+                    "name": "Jaw Worm",
+                    "hp": 42,
+                    "attack": 9,
+                    "actions": [
+                        {
+                            "type": "attack",
+                            "amount": 9
+                        },
+                        {
+                            "type": "block",
+                            "amount": 6
+                        }
+                    ],
+                    "phases": [],
+                    "passives": []
+                },
+                {
+                    "name": "Shelled Parasite",
+                    "hp": 68,
+                    "attack": 10,
+                    "actions": [
+                        {
+                            "type": "block",
+                            "amount": 6
+                        },
+                        {
+                            "type": "attack",
+                            "amount": 10
+                        },
+                        {
+                            "type": "attack",
+                            "amount": 6
+                        }
+                    ],
+                    "phases": [],
+                    "passives": []
+                }
+            ],
+            "completed": false,
+            "connections": [
+                16
+            ]
+        },
+        {
+            "id": 15,
+            "type": "Event",
+            "floor": 6,
+            "enemies_data": [],
+            "completed": false,
+            "connections": [
+                16
+            ]
+        },
+        {
+            "id": 16,
+            "type": "Rest",
+            "floor": 7,
+            "enemies_data": [],
+            "completed": false,
+            "connections": [
+                17,
+                18
+            ]
+        },
+        {
+            "id": 17,
+            "type": "Enemy",
+            "floor": 8,
+            "enemies_data": [
+                {
+                    "name": "Mystic",
+                    "hp": 54,
+                    "attack": 8,
+                    "actions": [
+                        {
+                            "type": "strength",
+                            "amount": 2
+                        },
+                        {
+                            "type": "block",
+                            "amount": 12
+                        },
+                        {
+                            "type": "attack",
+                            "amount": 8
+                        }
+                    ],
+                    "phases": [],
+                    "passives": []
+                },
+                {
+                    "name": "Louse",
+                    "hp": 35,
+                    "attack": 7,
+                    "actions": [
+                        {
+                            "type": "block",
+                            "amount": 5
+                        },
+                        {
+                            "type": "attack",
+                            "amount": 7
+                        }
+                    ],
+                    "phases": [],
+                    "passives": []
+                }
+            ],
+            "completed": false,
+            "connections": [
+                19,
+                21
+            ]
+        },
+        {
+            "id": 18,
+            "type": "Enemy",
+            "floor": 8,
+            "enemies_data": [
+                {
+                    "name": "Louse",
+                    "hp": 35,
+                    "attack": 7,
+                    "actions": [
+                        {
+                            "type": "block",
+                            "amount": 5
+                        },
+                        {
+                            "type": "attack",
+                            "amount": 7
+                        }
+                    ],
+                    "phases": [],
+                    "passives": []
+                }
+            ],
+            "completed": false,
+            "connections": [
+                21
+            ]
+        },
+        {
+            "id": 19,
+            "type": "Enemy",
+            "floor": 9,
+            "enemies_data": [
+                {
+                    "name": "Mystic",
+                    "hp": 54,
+                    "attack": 8,
+                    "actions": [
+                        {
+                            "type": "strength",
+                            "amount": 2
+                        },
+                        {
+                            "type": "block",
+                            "amount": 12
+                        },
+                        {
+                            "type": "attack",
+                            "amount": 8
+                        }
+                    ],
+                    "phases": [],
+                    "passives": []
+                }
+            ],
+            "completed": false,
+            "connections": [
+                22
+            ]
+        },
+        {
+            "id": 20,
+            "type": "Event",
+            "floor": 9,
+            "enemies_data": [],
+            "completed": false,
+            "connections": [
+                22
+            ]
+        },
+        {
+            "id": 21,
+            "type": "Enemy",
+            "floor": 9,
+            "enemies_data": [
+                {
+                    "name": "Spheric Guardian",
+                    "hp": 20,
+                    "attack": 10,
+                    "actions": [
+                        {
+                            "type": "block",
+                            "amount": 15
+                        },
+                        {
+                            "type": "attack",
+                            "amount": 10
+                        }
+                    ],
+                    "phases": [
+                        {
+                            "threshold": 1.0,
+                            "name": "Barricaded",
+                            "block": 40
+                        }
+                    ],
+                    "passives": []
+                },
+                {
+                    "name": "Snake Plant",
+                    "hp": 78,
+                    "attack": 7,
+                    "actions": [
+                        {
+                            "type": "attack",
+                            "amount": 7
+                        },
+                        {
+                            "type": "attack",
+                            "amount": 7
+                        },
+                        {
+                            "type": "block",
+                            "amount": 8
+                        }
+                    ],
+                    "phases": [],
+                    "passives": []
+                }
+            ],
+            "completed": false,
+            "connections": [
+                22
+            ]
+        },
+        {
+            "id": 22,
+            "type": "Event",
+            "floor": 10,
+            "enemies_data": [],
+            "completed": false,
+            "connections": [
+                23
+            ]
+        },
+        {
+            "id": 23,
+            "type": "Shop",
+            "floor": 11,
+            "enemies_data": [],
+            "completed": false,
+            "connections": [
+                24
+            ]
+        },
+        {
+            "id": 24,
+            "type": "Elite",
+            "floor": 12,
+            "enemies_data": [
+                {
+                    "name": "Gremlin Nob",
+                    "hp": 85,
+                    "attack": 14,
+                    "actions": [
+                        {
+                            "type": "attack",
+                            "amount": 14
+                        },
+                        {
+                            "type": "strength",
+                            "amount": 3
+                        }
+                    ],
+                    "phases": [],
+                    "passives": [
+                        "Enrage"
+                    ]
+                }
+            ],
+            "completed": false,
+            "connections": [
+                25
+            ]
+        },
+        {
+            "id": 25,
+            "type": "Enemy",
+            "floor": 13,
+            "enemies_data": [
+                {
+                    "name": "Spheric Guardian",
+                    "hp": 20,
+                    "attack": 10,
+                    "actions": [
+                        {
+                            "type": "block",
+                            "amount": 15
+                        },
+                        {
+                            "type": "attack",
+                            "amount": 10
+                        }
+                    ],
+                    "phases": [
+                        {
+                            "threshold": 1.0,
+                            "name": "Barricaded",
+                            "block": 40
+                        }
+                    ],
+                    "passives": []
+                },
+                {
+                    "name": "Spheric Guardian",
+                    "hp": 20,
+                    "attack": 10,
+                    "actions": [
+                        {
+                            "type": "block",
+                            "amount": 15
+                        },
+                        {
+                            "type": "attack",
+                            "amount": 10
+                        }
+                    ],
+                    "phases": [
+                        {
+                            "threshold": 1.0,
+                            "name": "Barricaded",
+                            "block": 40
+                        }
+                    ],
+                    "passives": []
+                }
+            ],
+            "completed": false,
+            "connections": [
+                27,
+                28
+            ]
+        },
+        {
+            "id": 26,
+            "type": "Elite",
+            "floor": 13,
+            "enemies_data": [
+                {
+                    "name": "Lagavulin",
+                    "hp": 110,
+                    "attack": 16,
+                    "actions": [
+                        {
+                            "type": "sleep"
+                        },
+                        {
+                            "type": "sleep"
+                        },
+                        {
+                            "type": "sleep"
+                        },
+                        {
+                            "type": "block",
+                            "amount": 10
+                        },
+                        {
+                            "type": "attack",
+                            "amount": 16
+                        }
+                    ],
+                    "phases": [],
+                    "passives": [
+                        "Asleep"
+                    ]
+                }
+            ],
+            "completed": false,
+            "connections": [
+                28
+            ]
+        },
+        {
+            "id": 27,
+            "type": "Event",
+            "floor": 14,
+            "enemies_data": [],
+            "completed": false,
+            "connections": [
+                29
+            ]
+        },
+        {
+            "id": 28,
+            "type": "Elite",
+            "floor": 14,
+            "enemies_data": [
+                {
+                    "name": "Taskmaster",
+                    "hp": 100,
+                    "attack": 13,
+                    "actions": [
+                        {
+                            "type": "attack",
+                            "amount": 13
+                        },
+                        {
+                            "type": "block",
+                            "amount": 10
+                        },
+                        {
+                            "type": "strength",
+                            "amount": 2
+                        }
+                    ],
+                    "phases": [],
+                    "passives": []
+                }
+            ],
+            "completed": false,
+            "connections": [
+                29
+            ]
+        },
+        {
+            "id": 29,
+            "type": "Boss",
+            "floor": 15,
+            "enemies_data": [
+                {
+                    "name": "Hexaghost",
+                    "hp": 250,
+                    "attack": 20,
+                    "actions": [
+                        {
+                            "type": "strength",
+                            "amount": 3
+                        },
+                        {
+                            "type": "attack",
+                            "amount": 20
+                        }
+                    ],
+                    "phases": [
+                        {
+                            "threshold": 0.5,
+                            "name": "Inferno",
+                            "strength": 2,
+                            "actions": [
+                                {
+                                    "type": "attack",
+                                    "amount": 28
+                                },
+                                {
+                                    "type": "strength",
+                                    "amount": 4
+                                }
+                            ]
+                        }
+                    ],
+                    "passives": []
+                }
+            ],
+            "completed": false,
+            "connections": []
+        }
+    ],
+    "combat_state": null
+}

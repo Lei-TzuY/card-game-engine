@@ -1,0 +1,29 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Test and coverage output
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local runtime data
+*.db
+*.sqlite
+*.log
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local secrets; keep .env.example tracked
+.env
+
+# Local editor / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+

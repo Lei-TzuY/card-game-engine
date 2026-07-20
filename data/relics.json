@@ -1,0 +1,170 @@
+{
+  "burning_blood": {
+    "id": "burning_blood",
+    "rarity": "common",
+    "name": "Burning Blood",
+    "description": "At the end of combat, heal 6 HP.",
+    "icon": "BB",
+    "rewardable": false
+  },
+  "vajra": {
+    "id": "vajra",
+    "rarity": "uncommon",
+    "name": "Vajra",
+    "description": "At the start of each combat, gain 1 Strength.",
+    "icon": "V",
+    "rewardable": true
+  },
+  "anchor": {
+    "id": "anchor",
+    "rarity": "common",
+    "name": "Anchor",
+    "description": "At the start of each combat, gain 10 Block.",
+    "icon": "A",
+    "rewardable": true
+  },
+  "blood_vial": {
+    "id": "blood_vial",
+    "rarity": "common",
+    "name": "Blood Vial",
+    "description": "At the start of each combat, heal 2 HP.",
+    "icon": "+",
+    "rewardable": true
+  },
+  "pure_water": {
+    "id": "pure_water",
+    "rarity": "common",
+    "name": "Pure Water",
+    "description": "At the start of each combat, gain 1 Energy.",
+    "icon": "W",
+    "rewardable": false
+  },
+  "oddly_smooth_stone": {
+    "id": "oddly_smooth_stone",
+    "rarity": "common",
+    "name": "Oddly Smooth Stone",
+    "description": "At the start of each combat, gain 1 Dexterity (Block Buff).",
+    "icon": "D",
+    "rewardable": true
+  },
+  "pen_nib": {
+    "id": "pen_nib",
+    "rarity": "uncommon",
+    "name": "Pen Nib",
+    "description": "Every 10th Attack you play deals double damage.",
+    "icon": "PN",
+    "rewardable": true
+  },
+  "orichalcum": {
+    "id": "orichalcum",
+    "rarity": "uncommon",
+    "name": "Orichalcum",
+    "description": "If you end your turn without Block, gain 6 Block.",
+    "icon": "O",
+    "rewardable": true
+  },
+  "tungsten_rod": {
+    "id": "tungsten_rod",
+    "rarity": "uncommon",
+    "name": "Tungsten Rod",
+    "description": "Whenever you lose HP, lose 1 less.",
+    "icon": "TR",
+    "rewardable": true
+  },
+  "bag_of_marbles": {
+    "id": "bag_of_marbles",
+    "rarity": "common",
+    "name": "Bag of Marbles",
+    "description": "At the start of each combat, apply 1 Vulnerable to ALL enemies.",
+    "icon": "BM",
+    "rewardable": true
+  },
+  "bag_of_preparation": {
+    "id": "bag_of_preparation",
+    "rarity": "common",
+    "name": "Bag of Preparation",
+    "description": "At the start of each combat, draw 2 additional cards.",
+    "icon": "BP",
+    "rewardable": true
+  },
+  "kunai": {
+    "id": "kunai",
+    "rarity": "uncommon",
+    "name": "Kunai",
+    "description": "Every 3rd Attack you play grants 1 Dexterity.",
+    "icon": "KU",
+    "rewardable": true
+  },
+  "shuriken": {
+    "id": "shuriken",
+    "rarity": "uncommon",
+    "name": "Shuriken",
+    "description": "Every 3rd Attack you play grants 1 Strength.",
+    "icon": "SH",
+    "rewardable": true
+  },
+  "letter_opener": {
+    "id": "letter_opener",
+    "rarity": "uncommon",
+    "name": "Letter Opener",
+    "description": "Every 3rd Skill you play deals 5 damage to ALL enemies.",
+    "icon": "LO",
+    "rewardable": true
+  },
+  "meat_on_the_bone": {
+    "id": "meat_on_the_bone",
+    "rarity": "rare",
+    "name": "Meat on the Bone",
+    "description": "At the end of combat, if your HP is at or below 50%, heal 12 HP.",
+    "icon": "MB",
+    "rewardable": true
+  },
+  "lantern": {
+    "id": "lantern",
+    "rarity": "uncommon",
+    "name": "Lantern",
+    "description": "At the start of each combat, gain 1 Energy.",
+    "icon": "LA",
+    "rewardable": true
+  },
+  "thread_and_needle": {
+    "id": "thread_and_needle",
+    "rarity": "rare",
+    "name": "Thread and Needle",
+    "description": "At the start of each combat, gain 4 Block.",
+    "icon": "TN",
+    "rewardable": true
+  },
+  "mercury_hourglass": {
+    "id": "mercury_hourglass",
+    "rarity": "uncommon",
+    "name": "Mercury Hourglass",
+    "description": "At the end of your turn, deal 3 damage to ALL enemies.",
+    "icon": "MH",
+    "rewardable": true
+  },
+  "bronze_scales": {
+    "id": "bronze_scales",
+    "rarity": "uncommon",
+    "name": "Bronze Scales",
+    "description": "At the start of each combat, gain 3 Thorns.",
+    "icon": "BS",
+    "rewardable": true
+  },
+  "red_skull": {
+    "id": "red_skull",
+    "rarity": "uncommon",
+    "name": "Red Skull",
+    "description": "At the start of each combat, if your HP is at or below 50%, gain 3 Strength.",
+    "icon": "RS",
+    "rewardable": true
+  },
+  "red_mask": {
+    "id": "red_mask",
+    "rarity": "uncommon",
+    "name": "Red Mask",
+    "description": "At the start of each combat, apply 1 Weak to ALL enemies.",
+    "icon": "RM",
+    "rewardable": true
+  }
+}

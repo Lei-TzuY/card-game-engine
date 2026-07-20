@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Game Engine</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="api-error-banner" class="api-error-banner" role="alert" aria-live="assertive" hidden></div>
+    <div id="api-busy-indicator" class="api-busy-indicator" aria-live="polite" hidden>Saving...</div>
+
+    <div class="overlay" id="game-over-overlay">
+        <h1 id="game-over-text">VICTORY</h1>
+        <div id="game-over-score" class="game-over-score"></div>
+        <div id="game-over-history" class="run-history"></div>
+        <button id="restart-btn" onclick="restartGame()">Play Again</button>
+    </div>
+
+    <!-- Top Bar -->
+    <div id="top-bar" style="display: none;">
+        <div class="top-bar-hp">❤️ HP: <span id="top-bar-hp-text">50/50</span></div>
+        <div class="top-bar-run-stats">
+            <span>💰 <span id="top-bar-gold">0</span>g</span>
+            <span>Floor <span id="top-bar-floor">0</span></span>
+            <span id="top-bar-ascension" class="top-bar-ascension" style="display: none;"></span>
+        </div>
+        <div class="top-bar-relics" id="relics-container">
+            <!-- Relics injected here -->
+        </div>
+        <div class="top-bar-potions" id="potions-container">
+            <!-- Potions injected here -->
+        </div>
+        <button onclick="abandonRun()" class="abandon-btn">Abandon Run</button>
+    </div>
+
+    <!-- Main Menu View -->
+    <div id="main-menu-view" class="view-container" style="display: none;">
+        <h1 class="main-title">Card Game Engine</h1>
+        <div class="menu-buttons">
+            <button class="menu-btn" onclick="showSaveSlots()">Play</button>
+        </div>
+    </div>
+
+    <!-- Save Slots View -->
+    <div id="save-slots-view" class="view-container" style="display: none;">
+        <h1>Select a Save Slot</h1>
+        <div id="slots-container" class="slots-container">
+            <!-- Slots injected here -->
+        </div>
+        <button class="menu-btn back-btn" onclick="showMainMenu()">Back</button>
+    </div>
+
+    <!-- Character Select View -->
+    <div id="character-select-view" class="view-container" style="display: none;">
+        <h1>Choose Your Character</h1>
+        <p>Each character starts with different health and a different deck.</p>
+        <div id="character-choices" class="character-choices">
+            <!-- Characters injected here -->
+        </div>
+    </div>
+
+    <!-- Map View -->
+    <div id="map-view" class="view-container" style="display: none;">
+        <h1>Select Next Encounter</h1>
+        
+        <div id="map-nodes" class="map-nodes-container" style="position: relative;">
+            <svg id="map-svg-layer" width="100%" height="100%" style="position: absolute; top: 0; left: 0; pointer-events: none; z-index: 0;"></svg>
+            <div id="map-nodes-content" style="position: relative; z-index: 1;">
+                <!-- Nodes injected here -->
+            </div>
+        </div>
+        
+        <div class="master-deck-container">
+            <h3>Master Deck</h3>
+            <div id="master-deck-list"></div>
+        </div>
+    </div>
+
+    <!-- Rest View -->
+    <div id="rest-view" class="view-container" style="display: none;">
+        <h1>Rest Site</h1>
+        <p>Recover before the next encounter or improve one card.</p>
+        <button class="rest-heal-btn" onclick="completeRest('heal')">
+            ❤️ Rest and heal <span id="rest-heal-amount">0</span> HP
+        </button>
+        <h2>Upgrade a card</h2>
+        <div id="rest-upgrade-cards" class="deck-action-list">
+            <!-- Upgradeable cards injected here -->
+        </div>
+    </div>
+
+    <!-- Event View -->
+    <div id="event-view" class="view-container" style="display: none;">
+        <h1 id="event-name">Event</h1>
+        <p id="event-description"></p>
+        <div id="event-choices" class="event-choices">
+            <!-- Event choices injected here -->
+        </div>
+    </div>
+
+    <!-- Reward View -->
+    <div id="reward-view" class="view-container" style="display: none;">
+        <h1 class="victory-title">VICTORY!</h1>
+        <div id="reward-card-section">
+            <h2>Choose a Card to add to your deck</h2>
+            <div id="reward-cards" class="hand-container reward-container">
+                <!-- Cards injected here -->
+            </div>
+            <button id="skip-reward-btn" class="end-turn-btn" onclick="chooseReward(null)">Skip Card</button>
+        </div>
+        <div id="reward-relic-section" class="reward-relic-section" style="display: none;">
+            <h2>Elite Relic</h2>
+            <button id="reward-relic-btn" class="reward-relic-btn" onclick="claimRelicReward()"></button>
+        </div>
+    </div>
+
+    <!-- Shop View -->
+    <div id="shop-view" class="view-container" style="display: none;">
+        <h1>Merchant</h1>
+        <p>Spend gold to add cards to your deck.</p>
+        <div id="shop-cards" class="shop-cards">
+            <!-- Shop offers injected here -->
+        </div>
+        <div class="shop-service">
+            <h2>Potions</h2>
+            <p>Purchased potions use one inventory slot.</p>
+            <div id="shop-potions" class="shop-potions">
+                <!-- Potion offers injected here -->
+            </div>
+        </div>
+        <div class="shop-service">
+            <h2>Card Removal — <span id="shop-remove-price">0</span>g</h2>
+            <p id="shop-remove-status">Remove one card from your deck.</p>
+            <div id="shop-remove-cards" class="deck-action-list">
+                <!-- Removable cards injected here -->
+            </div>
+        </div>
+        <button class="end-turn-btn" onclick="leaveShop()">Leave Shop</button>
+    </div>
+
+    <!-- Combat View -->
+    <div id="combat-view" class="view-container" style="display: none;">
+        <!-- Top: Enemies -->
+        <div class="battle-area enemy-area" id="enemies-container">
+            <!-- Enemies will be injected here -->
+        </div>
+
+        <!-- Middle: Player -->
+        <div class="battle-area player-area">
+            <div class="entity" id="player-entity" data-index="-1" onclick="onEntityClick('player', -1)">
+                <div class="buffs" id="player-buffs"></div>
+                <div class="orb-slots" id="player-orbs"></div>
+                <div class="sprite player-sprite"></div>
+                <div class="stats">
+                    <h2 id="player-name">Hero</h2>
+                    <div class="bar-container">
+                        <div class="hp-bar" id="player-hp-bar"></div>
+                        <span class="hp-text" id="player-hp-text">50/50</span>
+                    </div>
+                    <div class="block-indicator" id="player-block">🛡️ 0</div>
+                    <div class="stance-indicator" id="player-stance" style="display: none;"></div>
+                </div>
+            </div>
+            
+            <div class="info-panel">
+                <div class="energy-orb">
+                    <span id="player-energy">3/3</span>
+                    <small>Energy</small>
+                </div>
+                <button class="end-turn-btn" onclick="endTurn()">End Turn</button>
+                <div class="deck-info">
+                    <div>Deck: <span id="deck-count" style="cursor: pointer; text-decoration: underline;" onclick="openPileViewer('deck')">0</span></div>
+                    <div>Discard: <span id="discard-count" style="cursor: pointer; text-decoration: underline;" onclick="openPileViewer('discard')">0</span></div>
+                    <div>Exhaust: <span id="exhaust-count" style="cursor: pointer; text-decoration: underline;" onclick="openPileViewer('exhaust')">0</span></div>
+                    <div>Powers: <span id="power-count">0</span></div>
+                    <div id="orb-panel">Orbs: <span id="orb-list">none</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom: Hand -->
+        <div class="hand-container" id="hand-container">
+            <!-- Cards will be injected here -->
+        </div>
+    </div>
+
+    <!-- Pile Viewer Modal -->
+    <div id="pile-viewer-modal" class="overlay" style="display: none; align-items: flex-start; justify-content: center; padding-top: 50px;">
+        <div style="background: rgba(20,20,20,0.95); border: 2px solid #555; padding: 20px; border-radius: 10px; max-width: 90%; max-height: 80%; overflow-y: auto;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h1 id="pile-viewer-title" style="margin: 0; color: #fff;">Pile Viewer</h1>
+                <button onclick="closePileViewer()" style="padding: 10px 20px; font-size: 16px; cursor: pointer; background: #600; color: #fff; border: none; border-radius: 5px;">Close</button>
+            </div>
+            <div id="pile-viewer-cards" class="hand-container" style="flex-wrap: wrap; justify-content: center; transform: scale(0.8); transform-origin: top;">
+                <!-- Cards injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Targeting SVG Overlay -->
+    <svg id="targeting-arrow-svg" width="100%" height="100%" style="position:fixed; top:0; left:0; pointer-events:none; z-index:9999; display:none;">
+        <defs>
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="rgba(255, 50, 50, 0.8)" />
+            </marker>
+        </defs>
+        <path id="targeting-arrow-path" d="M0,0 L0,0" stroke="rgba(255, 50, 50, 0.8)" stroke-width="6" fill="none" marker-end="url(#arrowhead)" stroke-dasharray="15,10">
+            <animate attributeName="stroke-dashoffset" from="100" to="0" dur="2s" repeatCount="indefinite" />
+        </path>
+    </svg>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

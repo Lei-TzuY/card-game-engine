@@ -1,0 +1,89 @@
+{
+    "easy": [
+        ["Goblin", 18, [{"type": "attack", "amount": 5}, {"type": "block", "amount": 4}]],
+        ["Rat Pack", 14, [{"type": "attack", "amount": 4}, {"type": "attack", "amount": 6}]],
+        ["Cultist", 22, [{"type": "strength", "amount": 2}, {"type": "attack", "amount": 6}]],
+        ["Looter", 44, [{"type": "attack", "amount": 10}, {"type": "block", "amount": 5}]],
+        ["Slaver", 46, [{"type": "attack", "amount": 7}, {"type": "attack", "amount": 5}, {"type": "block", "amount": 5}]],
+        ["Mad Gremlin", 20, [{"type": "attack", "amount": 4}, {"type": "strength", "amount": 1}, {"type": "attack", "amount": 4}], [], ["Enrage"]],
+        ["Shield Gremlin", 24, [{"type": "block", "amount": 8}, {"type": "attack", "amount": 5}, {"type": "block", "amount": 5}]],
+        ["Sneaky Looter", 32, [{"type": "attack", "amount": 7}, {"type": "block", "amount": 4}, {"type": "attack", "amount": 9}]],
+        ["True Cultist", 28, [{"type": "buff", "buff": "ritual", "amount": 1}, {"type": "attack", "amount": 5}]]
+    ],
+    "normal": [
+        ["Jaw Worm", 42, [{"type": "attack", "amount": 9}, {"type": "block", "amount": 6}]],
+        ["Louse", 35, [{"type": "block", "amount": 5}, {"type": "attack", "amount": 7}]],
+        ["Fungi Beast", 38, [{"type": "attack", "amount": 8}, {"type": "strength", "amount": 2}]],
+        ["Spheric Guardian", 20, [{"type": "block", "amount": 15}, {"type": "attack", "amount": 10}], [{"threshold": 1.0, "name": "Barricaded", "block": 40}]],
+        ["Shelled Parasite", 68, [{"type": "block", "amount": 6}, {"type": "attack", "amount": 10}, {"type": "attack", "amount": 6}]],
+        ["Snake Plant", 78, [{"type": "attack", "amount": 7}, {"type": "attack", "amount": 7}, {"type": "block", "amount": 8}]],
+        ["The Chosen", 95, [{"type": "attack", "amount": 10}, {"type": "strength", "amount": 2}, {"type": "attack", "amount": 12}]],
+        ["Centurion", 82, [{"type": "block", "amount": 10}, {"type": "attack", "amount": 12}, {"type": "strength", "amount": 2}]],
+        ["Mystic", 54, [{"type": "strength", "amount": 2}, {"type": "block", "amount": 12}, {"type": "attack", "amount": 8}]],
+        ["Hex Witch", 48, [{"type": "debuff", "buff": "weak", "amount": 2}, {"type": "attack", "amount": 8}, {"type": "debuff", "buff": "vulnerable", "amount": 2}]],
+        ["Iron Tortoise", 60, [{"type": "buff", "buff": "metallicize", "amount": 4}, {"type": "attack", "amount": 7}, {"type": "block", "amount": 6}]],
+        ["Bramble Beast", 64, [{"type": "buff", "buff": "thorns", "amount": 4}, {"type": "attack", "amount": 9}]]
+    ],
+    "elite": [
+        ["Gremlin Nob", 85, [{"type": "attack", "amount": 14}, {"type": "strength", "amount": 3}], [], ["Enrage"]],
+        ["Lagavulin", 110, [{"type": "sleep"}, {"type": "sleep"}, {"type": "sleep"}, {"type": "block", "amount": 10}, {"type": "attack", "amount": 16}], [], ["Asleep"]],
+        ["Sentries", 75, [{"type": "attack", "amount": 11}, {"type": "block", "amount": 8}]],
+        ["Book of Stabbing", 160, [{"type": "attack", "amount": 6}, {"type": "attack", "amount": 12}, {"type": "strength", "amount": 1}]],
+        ["Gremlin Leader", 145, [{"type": "strength", "amount": 3}, {"type": "block", "amount": 12}, {"type": "attack", "amount": 6}], [], ["Enrage"]],
+        ["Taskmaster", 100, [{"type": "attack", "amount": 13}, {"type": "block", "amount": 10}, {"type": "strength", "amount": 2}]],
+        ["Tri-Sentry", 120, [{"type": "block", "amount": 12}, {"type": "attack", "amount": 9}, {"type": "attack", "amount": 9}]],
+        ["Arena Champion", 135, [{"type": "strength", "amount": 2}, {"type": "attack", "amount": 15}, {"type": "block", "amount": 12}]],
+        ["Frost Sorcerer", 105, [{"type": "debuff", "buff": "frail", "amount": 2}, {"type": "attack", "amount": 11}, {"type": "buff", "buff": "dexterity", "amount": 2}]],
+        ["Thorn Knight", 130, [{"type": "buff", "buff": "thorns", "amount": 5}, {"type": "attack", "amount": 13}, {"type": "block", "amount": 12}]]
+    ],
+    "boss": [
+        [
+            "The Guardian",
+            240,
+            [{"type": "attack", "amount": 18}, {"type": "block", "amount": 15}],
+            [{"threshold": 0.5, "name": "Defensive Mode", "block": 15, "actions": [{"type": "block", "amount": 20}, {"type": "attack", "amount": 24}]}]
+        ],
+        [
+            "Hexaghost",
+            250,
+            [{"type": "strength", "amount": 3}, {"type": "attack", "amount": 20}],
+            [{"threshold": 0.5, "name": "Inferno", "strength": 2, "actions": [{"type": "attack", "amount": 28}, {"type": "strength", "amount": 4}]}]
+        ],
+        [
+            "The Slime Boss",
+            140,
+            [{"type": "attack", "amount": 16}, {"type": "block", "amount": 12}],
+            [{"threshold": 0.5, "name": "Enraged Slime", "block": 10, "actions": [{"type": "attack", "amount": 22}, {"type": "block", "amount": 15}]}]
+        ],
+        [
+            "The Automaton",
+            300,
+            [{"type": "attack", "amount": 10}, {"type": "block", "amount": 20}, {"type": "strength", "amount": 2}],
+            [{"threshold": 0.5, "name": "Hyperbeam Ready", "strength": 5, "actions": [{"type": "attack", "amount": 45}, {"type": "block", "amount": 10}]}]
+        ],
+        [
+            "The Champ",
+            420,
+            [{"type": "attack", "amount": 16}, {"type": "block", "amount": 18}],
+            [{"threshold": 0.5, "name": "Anger", "strength": 4, "actions": [{"type": "attack", "amount": 22}, {"type": "strength", "amount": 4}]}]
+        ],
+        [
+            "Time Eater",
+            456,
+            [{"type": "attack", "amount": 15}, {"type": "block", "amount": 12}, {"type": "attack", "amount": 8}],
+            [{"threshold": 0.5, "name": "Time Warp", "strength": 2, "actions": [{"type": "attack", "amount": 20}, {"type": "block", "amount": 20}]}]
+        ],
+        [
+            "The Collector",
+            320,
+            [{"type": "strength", "amount": 2}, {"type": "attack", "amount": 18}, {"type": "block", "amount": 16}],
+            [{"threshold": 0.5, "name": "Collected Power", "strength": 4, "actions": [{"type": "attack", "amount": 24}, {"type": "block", "amount": 18}]}]
+        ],
+        [
+            "The Ritualist",
+            380,
+            [{"type": "buff", "buff": "ritual", "amount": 2}, {"type": "attack", "amount": 14}, {"type": "debuff", "buff": "weak", "amount": 2}],
+            [{"threshold": 0.5, "name": "Bloodlust", "strength": 3, "actions": [{"type": "buff", "buff": "ritual", "amount": 3}, {"type": "attack", "amount": 22}]}]
+        ]
+    ]
+}
